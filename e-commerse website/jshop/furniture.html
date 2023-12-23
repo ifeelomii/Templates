@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        header {
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .nav1 {
+            width: 100%;
+            height: 30px;
+            background: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 70px;
+            margin: 0 0 5px 0;
+            flex-wrap: wrap;
+        }
+
+        .nav1 a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border-right: 1px solid white;
+        }
+
+        .nav2 {
+            width: 100%;
+            height: 130px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 70px;
+            margin: 2px 0;
+        }
+
+
+        .logo {
+            font-size: 3em;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #3498db;
+        }
+
+        .icons i {
+            font-size: 20px;
+            padding: 10px;
+            margin: 0 15px;
+            border: 1px solid grey;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        .icons i:hover {
+            background: #3498db;
+            color: white;
+        }
+
+
+        .nav3 {
+            width: 90%;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+            margin: auto;
+        }
+
+        .nav3 a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 20px;
+            transition: 0.4s;
+        }
+
+        .nav3 a:hover {
+            background: #3498db;
+            color: white;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #1b1b1b;
+            background-color: #fff;
+        }
+
+        .container {
+            width: 1142px;
+            margin: 0 auto;
+        }
+
+
+        @font-face {
+            font-family: Heavitas;
+            src: url(https://raw.githack.com/SochavaAG/example-mycode/master/pens/1_fonts/Heavitas/Heavitas.eot);
+            src: url(https://raw.githack.com/SochavaAG/example-mycode/master/pens/1_fonts/Heavitas/Heavitas.woff2) format('woff2'),
+                url(https://raw.githack.com/SochavaAG/example-mycode/master/pens/1_fonts/Heavitas/Heavitas.woff) format('woff'),
+                url(https://raw.githack.com/SochavaAG/example-mycode/master/pens/1_fonts/Heavitas/Heavitas.ttf) format('truetype'),
+                url(https://raw.githack.com/SochavaAG/example-mycode/master/pens/1_fonts/Heavitas/Heavitas.svg#Heavitas) format('svg'),
+                url(https://raw.githack.com/SochavaAG/example-mycode/master/pens/1_fonts/Heavitas/Heavitas.eot?#iefix) format('embedded-opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-size: 18px;
+            color: #53545a;
+        }
+
+        .title {
+            padding: 100px 0;
+            background-color: #00a2ff;
+            text-align: center;
+            font-family: Heavitas, sans-serif;
+            font-weight: bold;
+            font-size: 120px;
+            color: #FFF;
+
+            position: relative;
+        }
+
+        .title:before {
+            content: "";
+            height: 125px;
+            width: 100%;
+            background: url(https://raw.githack.com/SochavaAG/example-mycode/master/pens/animation-wave-shadow/images/wave.svg) repeat-x scroll 0 0;
+            background-size: 1600px 198px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            filter: drop-shadow(5px -10px 3px rgba(0, 0, 0, .2));
+            animation: an-wave 20s linear infinite;
+        }
+
+
+        .box {
+            padding: 70px 0;
+            background-color: #FFF;
+
+            position: relative;
+        }
+
+        .item {
+            align-items: center;
+            padding: 0 0 120px;
+        }
+
+        .descr {
+            flex: 1 1 60%;
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+
+        .title-item {
+            padding: 0 0 15px;
+            font-family: Heavitas, sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .tagline-item {
+            padding: 0 0 15px;
+            font-family: Heavitas, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .item {
+            margin: auto;
+        }
+
+        .item {
+            padding: 10px 10px 10px 20px;
+            position: relative;
+        }
+
+        .item:before {
+            content: "";
+            height: 6px;
+            width: 6px;
+            background-color: #00a2ff;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            border-radius: 50%;
+        }
+
+        .img {
+            height: 380px;
+            width: 500px;
+        }
+
+        .img-box {
+            flex: 1 1 40%;
+            height: 300px;
+            margin: 10px 0 100px;
+            padding: 0 15px;
+            text-align: center;
+        }
+
+        .item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        article {
+            margin: auto;
+        }
+
+        @keyframes an-wave {
+            100% {
+                background-position-x: -1600px;
+            }
+        }
+
+        @media screen and (max-width: 979px) {
+            .title {
+                font-size: 90px;
+            }
+
+            .descr {
+                padding: 0;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .container {
+                width: 96%;
+            }
+
+            .item {
+                flex-wrap: wrap;
+            }
+
+            .item:nth-child(odd) {
+                flex-direction: row;
+            }
+
+            .descr {
+                flex: 0 0 100%;
+                order: 2;
+            }
+
+            .img-box {
+                flex: 0 0 100%;
+                order: 1;
+                height: 100px;
+                width: 100%;
+                min-width: 150px;
+                padding: 0;
+            }
+        }
+
+        @media only screen and (max-width: 639px) {
+            .title {
+                font-size: 60px;
+            }
+        }
+
+        @media only screen and (max-width: 479px) {
+            .title {
+                font-size: 40px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 979px) {
+            .format-container {
+                width: 750px;
+            }
+
+        }
+
+        @media (min-width: 980px) and (max-width: 1161px) {
+            .format-container {
+                width: 960px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <nav class="nav1">
+            <div>
+                <a href="#">Help</a>
+                <a href="#">Delivery</a>
+                <a href="#">Contact</a>
+            </div>
+            <div>
+                Call Us : 9876543210
+            </div>
+        </nav>
+
+        <nav class="nav3">
+            <a href="index.html">Home</a>
+            <a href="electronics.html">Electronics</a>
+            <a href="clothing.html">Clothing</a>
+            <a href="footwear.html">Footwear</a>
+            <a href="furniture.html" class="active">Furniture</a>
+            <a href="#">More</a>
+        </nav>
+
+        <nav class="nav2">
+            <div class="logo">
+                <span>Apni</span>Dukan
+            </div>
+            <div class="icons">
+                <i class="fa fa-google"></i>
+                <i class="fa fa-envelope"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-bell"></i>
+            </div>
+        </nav>
+
+
+        <section id="featured">
+            <div class="f-container">
+                <div class="block">
+                    <div class="title">
+                        <div class="format-container">
+                            <h1>Furniture</h1>
+                        </div>
+                    </div>
+                    <div class="format-container">
+                        <section class="box">
+                            <article class="item">
+                                <div class="descr">
+                                    <div class="title-item">
+                                        Featured
+                                    </div>
+                                    <div class="tagline-item">
+                                        Jordyblue Louis Fabric Manual Recliner(Finish Color - Tan, DIY(Do-It-Yourself))
+                                    </div>
+                                    <ul class="list">
+                                        <li>
+                                            Turn on the Relax Mode with Jordyblue Recliner. Presenting the most premium
+                                            range of Recliners from Jordyblue. Made on Sturdy High-Quality Metal Frame
+                                            Recliner Mechanism that forms the core of the Recliner. High-Quality Wood
+                                            that provides strength and support to the seating mechanism.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="img-box">
+                                    <img src="img/fr1.png" alt="" class="img">
+                                </div>
+                            </article>
+
+                            <article class="item">
+                                <div class="descr">
+                                    <div class="title-item">
+                                        Furniture
+                                    </div>
+                                    <div class="tagline-item">
+                                        DuroFlex Avalon Fabric Manual Swivel & Rocker Recliner (Finish Color - Graphite
+                                        Grey, DIY(Do-It-Yourself))
+                                    </div>
+                                    <ul class="list">
+                                        <li>
+                                            Rock, Rotate Or Recline! The choice is yours with Duroflex's Avalon RRR
+                                            single-seater fabric recliner. Promising full body support and cloud-like
+                                            comfort in all positions, this recliner combines quality and convenience
+                                            like never before. With its high elastic nylon webbing and zig-zag spring
+                                            support, you get nothing less than next-level relaxation. This recliner has
+                                            an additional polyfill cushion attached to the armrest and a back cushion
+                                            designed to offer good neck and lumbar support. What more can you ask for?
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="img-box">
+                                    <img src="img/fr2.png" alt="" class="img">
+                                </div>
+                            </article>
+
+                            <article class="item">
+                                <div class="descr">
+                                    <div class="title-item">Furniture</div>
+                                    <div class="tagline-item">
+                                        Star Work Leather Manual Recliner (Finish Color - Maroon, Knock Down)
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Adjustable Reclining Position: Locks under each armrest to keep the
+                                            zero-gravity lounge chair in a suitable position. The lounge chair can be
+                                            adjusted for maximum comfort. It will help you relieve the stress on your
+                                            back
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="img-box">
+                                    <img src="img/fr3.png" alt="" class="img">
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </header>
+
+</body>
+
+</html>
