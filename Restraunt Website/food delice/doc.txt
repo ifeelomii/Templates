@@ -1,0 +1,31 @@
+Introduction:- 
+This is a reservation form for a restaurant called "Food Délice".
+The reservation form has input fields such as:- 
+1) Full name of the customer
+2) Reservation date
+3) Reservation Time
+4) Number of guests
+5) Phone number
+6) email address
+
+The input are all mandatory information and hence cannot be skipped.
+The form validation is done using HTML only.
+The submit button submits the data to the server side.
+
+Extra Features:-
+The extra features added in this reservation form are:-
+1) Socials:- social media handels and links of the restaurant(if available), when clicked upon will redirect directly on the respective social media platform.
+    Platforms available:-
+    1) Instagram
+    2) Facebook
+    3) Twitter
+
+2) Address:- The address feature will directly open google maps and will pin the restaurant's location.
+
+3) Contact Us:- This feature will allow the customer to directly call or mail the restaurant to clear the querries or directly book on call. The Contact Us...? button will, when clicked, opens as a dropdown menu, showing the hidden options for contacting the restaurant. The dropdown menu is made using checkbox input type instead of dropdown input type.
+
+4) Menu Card:- Menu card button, when clicked upon, redirects to the menu page. The menu page has variety of cuisines for the customer to choose form.
+
+5) Custom menu:-  There is an additional menu titled as custom menu which is an option for the customers to help restaurant in serving the customers with a meal as per the customer's choice(low sugar, low fat, low carbohydrates, non-oily food).
+
+6) Feedback Services:- Feedback form helps customer helps customer in providing their valuable Feedback.

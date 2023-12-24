@@ -1,0 +1,119 @@
+html,
+body {
+    min-height: 100%;
+}
+
+body,
+div,
+form {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 22px;
+}
+
+h1,
+h4 {
+    margin: 15px 0 4px;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(130, 106, 251) ;
+    height: inherit;
+    padding: 3px;
+}
+
+form {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+input {
+    width: calc(100% - 10px);
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+input:hover {
+    border: 1px solid rgb(88, 56, 250);
+}
+
+table {
+    width: 100%;
+}
+
+h4 {
+    padding: 15px 0 5px;
+}
+
+.question-answer label {
+    display: inline-block;
+    padding: 0 20px 15px 0;
+}
+
+.question-answer input {
+    width: auto;
+}
+
+th,
+td {
+    width: 17%;
+    padding: 15px 0;
+    text-align: center;
+    vertical-align: unset;
+    line-height: 18px;
+    font-weight: 400;
+    word-break: break-all;
+    border-bottom: 1px solid #095484;
+    color: #095484;
+}
+
+.first-col {
+    width: 26%;
+    text-align: left;
+}
+
+.btn-block {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    height: 55px;
+    width: 100%;
+    border: none;
+    font-weight: 400;
+    border-radius: 5px;
+    background-color: rgb(130, 106, 251);
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(88, 56, 250);
+}
+
+@media (min-width: 568px) {
+
+    th,
+    td {
+        word-break: keep-all;
+    }
+}
