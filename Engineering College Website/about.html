@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-size: 15px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* N A V B A R */
+
+        #header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        .container {
+            width: 86%;
+            margin: 0 auto;
+        }
+
+        #header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .main-nav,
+        .main-nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .main-nav ul li {
+            float: left;
+            margin-left: 15px;
+            font-size: 15px;
+        }
+
+        .main-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding: 8px 10px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #1b1b1b;
+            background-color: #fff;
+        }
+
+        nav .menu-btn i {
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #click {
+            display: none;
+        }
+
+        @media (max-width:940px) {
+
+            nav .menu-btn i {
+                display: block;
+            }
+
+            #click:checked~.menu-btn i::before {
+                content: "\f00d";
+            }
+
+            nav ul {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                background: #111;
+                height: 100vh;
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+
+            #click:checked~ul {
+                right: 0;
+                transition: all 0.3s ease;
+            }
+
+            nav ul li {
+                margin: 40px 0;
+            }
+
+            nav ul li a {
+                font-size: 10px;
+                display: block;
+            }
+        }
+
+        .container {
+            width: 86%;
+            margin: 0 auto;
+        }
+
+        .about-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: #cfd6f9;
+        }
+
+        /* R E A D - M O R E */
+        p {
+            padding: 15px;
+            font-size: 25px;
+            border-radius: 10px;
+            border: 2px solid #0d5fa3;
+        }
+
+        .read-more-state {
+            display: none;
+        }
+
+        .read-more-target {
+            max-height: 0;
+            opacity: 0;
+            font-size: 0;
+            transition: 0.45s ease;
+        }
+
+        .read-more-state:checked~.read-more-wrap,
+        .read-more-target {
+            opacity: 1;
+            font-size: inherit;
+        }
+
+        .read-more-state~.read-more-trigger::before {
+            content: 'Read More';
+        }
+
+        .read-more-state:checked~.read-more-trigger::before {
+            content: 'Read Less';
+        }
+
+        .read-more-trigger {
+            margin-top: 20px;
+            padding: 0 25px;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 20px;
+            line-height: 2;
+            border-radius: 10px;
+            background-color: #0d5fa3;
+        }
+
+        h1 {
+            font-size: 25px;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- N A V B A R  -->
+    <header id="header">
+        <div class="container">
+            <nav class="main-nav">
+                <input type="checkbox" name="" id="click">
+                <label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
+                <ul>
+                    <li><a href="college_homepage.html">HOME</a></li>
+                    <li><a href="about.html" class="active">ABOUT US</a></li>
+                    <li><a href="department.html">DEPARTMENT</a></li>
+                    <li><a href="faculty.html">FACULTY</a></li>
+                    <li><a href="research.html">RESEARCH AND PLACEMENT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- E N D -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <input type="checkbox" class="read-more-state" id="post">
+            <h1>About Us</h1>
+            <p class="read-more-wrap">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius necessitatibus
+                assumenda iste hic nihil reiciendis quasi sit eveniet ut tempore.
+                <span class="read-more-target">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem optio
+                    eveniet fugiat sunt eaque accusamus expedita, non, quasi voluptas dignissimos, illum magnam corrupti
+                    nostrum cumque adipisci quis minima iure beatae tempore exercitationem asperiores explicabo
+                    sapiente? Sunt, corrupti inventore, totam aut laudantium pariatur quibusdam quia mollitia alias
+                    ducimus nemo eaque obcaecati!</span>
+            </p>
+            <label for="post" class="read-more-trigger"></label>
+        </div>
+    </section>
+</body>
+
+</html>

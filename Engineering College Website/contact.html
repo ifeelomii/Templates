@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+
+        /* N A V B A R */
+
+        #header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        .container {
+            width: 86%;
+            margin: 0 auto;
+        }
+
+        #header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .main-nav,
+        .main-nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .main-nav ul li {
+            float: left;
+            margin-left: 15px;
+            font-size: 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding: 8px 10px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #1b1b1b;
+            background-color: #fff;
+        }
+
+        nav .menu-btn i {
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #click {
+            display: none;
+        }
+
+        @media (max-width:940px) {
+
+            nav .menu-btn i {
+                display: block;
+            }
+
+            #click:checked~.menu-btn i::before {
+                content: "\f00d";
+            }
+
+            nav ul {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                background: #111;
+                height: 100vh;
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+
+            #click:checked~ul {
+                right: 0;
+                transition: all 0.3s ease;
+            }
+
+            nav ul li {
+                margin: 40px 0;
+            }
+
+            nav ul li a {
+                font-size: 10px;
+                display: block;
+            }
+        }
+
+        /* C O N T A C T -  F O R M */
+        .section{
+            margin-top: 5px;
+        }
+        .form-style-1 {
+            margin: 10px auto;
+            max-width: 400px;
+            padding: 20px 12px 10px 20px;
+            font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        }
+        
+        .form-style-1 li {
+            padding: 0;
+            display: block;
+            list-style: none;
+            margin: 10px 0 0 0;
+        }
+        
+        .form-style-1 label {
+            margin: 0 0 3px 0;
+            padding: 0px;
+            display: block;
+            font-weight: bold;
+        }
+        
+        .form-style-1 input[type=text],
+        .form-style-1 input[type=date],
+        .form-style-1 input[type=datetime],
+        .form-style-1 input[type=number],
+        .form-style-1 input[type=search],
+        .form-style-1 input[type=time],
+        .form-style-1 input[type=url],
+        .form-style-1 input[type=email],
+        textarea,
+        select {
+            box-sizing: border-box;
+            border: 1px solid #BEBEBE;
+            padding: 7px;
+            margin: 0px;
+            outline: none;
+        }
+        
+        .form-style-1 input[type=text]:focus,
+        .form-style-1 input[type=date]:focus,
+        .form-style-1 input[type=datetime]:focus,
+        .form-style-1 input[type=number]:focus,
+        .form-style-1 input[type=search]:focus,
+        .form-style-1 input[type=time]:focus,
+        .form-style-1 input[type=url]:focus,
+        .form-style-1 input[type=email]:focus,
+        .form-style-1 textarea:focus,
+        .form-style-1 select:focus {
+            -moz-box-shadow: 0 0 8px #88D5E9;
+            -webkit-box-shadow: 0 0 8px #88D5E9;
+            box-shadow: 0 0 8px #88D5E9;
+            border: 1px solid #88D5E9;
+        }
+        
+        .form-style-1 .field-divided {
+            width: 49%;
+        }
+        
+        .form-style-1 .field-long {
+            width: 100%;
+        }
+        
+        .form-style-1 .field-select {
+            width: 100%;
+        }
+        
+        .form-style-1 .field-textarea {
+            height: 100px;
+        }
+        
+        .form-style-1 input[type=submit],
+        .form-style-1 input[type=button] {
+            background: #4B99AD;
+            padding: 8px 15px 8px 15px;
+            border: none;
+            color: #fff;
+        }
+        
+        .form-style-1 input[type=submit]:hover,
+        .form-style-1 input[type=button]:hover {
+            background: #4691A4;
+            box-shadow: none;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+        }
+        
+        .form-style-1 .required {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- N A V B A R  -->
+    <header id="header">
+        <div>
+            <nav class="main-nav">
+                <input type="checkbox" name="" id="click">
+                <label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
+                <ul>
+                    <li><a href="college_homepage.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="department.html">DEPARTMENT</a></li>
+                    <li><a href="faculty.html">FACULTY</a></li>
+                    <li><a href="research.html">RESEARCH AND PLACEMENT</a></li>
+                    <li><a href="contact.html" class="active">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section contact-section" id="contact">
+        <div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.2731696127853!2d73.75945111433116!3d18.65173387001882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9e76c8fa205%3A0x1b210131915734fd!2sPCCOE%20-%20Pimpri%20Chinchwad%20College%20Of%20Engineering%20%7C%20Autonomous%20Engineering%20College%20in%20Pune!5e0!3m2!1sen!2sin!4v1671305626057!5m2!1sen!2sin"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="section-contact-main contact-container">
+            <form action="#">
+                <ul class="form-style-1">
+                    <li><label>Full Name <span class="required">*</span></label><input type="text" name="field1"
+                            class="field-divided" placeholder="First" /> <input type="text" name="field2"
+                            class="field-divided" placeholder="Last" /></li>
+                    <li>
+                        <label>Email <span class="required">*</span></label>
+                        <input type="email" name="field3" class="field-long" placeholder="demo@gmail.com" />
+                    </li>
+                    <li>
+                        <label>Subject</label>
+                        <input type="text" class="field-select">
+                    </li>
+                    <li>
+                        <label>Your Message <span class="required">*</span></label>
+                        <textarea name="field5" id="field5" class="field-long field-textarea"
+                            placeholder="Type Your Message"></textarea>
+                    </li>
+                    <li>
+                        <button class="btn">Send Message</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

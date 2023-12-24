@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+
+        /* N A V B A R */
+
+        #header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        .container {
+            width: 86%;
+            margin: 0 auto;
+        }
+
+        #header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .main-nav,
+        .main-nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .main-nav ul li {
+            float: left;
+            margin-left: 15px;
+            font-size: 15px;
+        }
+
+        .main-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding: 8px 10px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #1b1b1b;
+            background-color: #fff;
+        }
+
+        nav .menu-btn i {
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #click {
+            display: none;
+        }
+
+        @media (max-width:940px) {
+
+            nav .menu-btn i {
+                display: block;
+            }
+
+            #click:checked~.menu-btn i::before {
+                content: "\f00d";
+            }
+
+            nav ul {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                background: #111;
+                height: 100vh;
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+
+            #click:checked~ul {
+                right: 0;
+                transition: all 0.3s ease;
+            }
+
+            nav ul li {
+                margin: 40px 0;
+            }
+
+            nav ul li a {
+                font-size: 10px;
+                display: block;
+            }
+        }
+
+        .container {
+            width: 86%;
+            margin: 0 auto;
+        }
+
+        .faculty-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: #e7b5f1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- N A V B A R  -->
+    <header id="header">
+        <div class="container">
+            <nav class="main-nav">
+                <input type="checkbox" name="" id="click">
+                <label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
+                <ul>
+                    <li><a href="college_homepage.html">HOME</a></li>
+                    <li><a href="about.html" >ABOUT US</a></li>
+                    <li><a href="department.html" >DEPARTMENT</a></li>
+                    <li><a href="faculty.html" class="active">FACULTY</a></li>
+                    <li><a href="research.html">RESEARCH AND PLACEMENT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- E N D -->
+    <section class="faculty-section" id="faculty">
+        <div class="container">
+            <h1>Faculty</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sunt labore voluptas optio. Optio
+                quibusdam cumque eligendi. Laudantium repudiandae consectetur magnam deleniti eos iusto architecto.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sunt labore voluptas optio. Optio
+                quibusdam cumque eligendi. Laudantium repudiandae consectetur magnam deleniti eos iusto architecto.</p>
+
+        </div>
+    </section>
+    <!-- <section class="research-section" id="research">
+        <div class="container">
+            <h1>RESEARCH AND PLACEMENT</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sunt labore voluptas optio. Optio
+                quibusdam cumque eligendi. Laudantium repudiandae consectetur magnam deleniti eos iusto architecto.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sunt labore voluptas optio. Optio
+                quibusdam cumque eligendi. Laudantium repudiandae consectetur magnam deleniti eos iusto architecto.</p>
+
+        </div>
+    </section> -->
+</body>
+
+</html>
